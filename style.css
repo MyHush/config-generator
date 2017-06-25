@@ -37,8 +37,12 @@ body {
 }
 
 .jumbo .logo {
-  width: 750px;
-  height: 600px
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.jumbo .logo img {
+  width: 80%;
 }
 
 .jumbo #platform {
