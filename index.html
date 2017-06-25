@@ -1,0 +1,108 @@
+<html lang="en">
+  <head>
+    <title>Config Generator | myHush.org</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/milligram/1.1.0/milligram.min.css'>
+      <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Poppins:300,400,500,700'>
+      <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css'>
+      <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="app">
+      <div class="jumbo text-center">
+        <h1>myHush Config Generator</h1>
+        <h4>Select your platform</h4>
+        <ul id="platform">
+          <li><button class="button-white button-outline" v-on:click="setPlatform('Linux')">Linux</button></li>
+          <li><button class="button-white button-outline" v-on:click="setPlatform('Mac OS')">Mac OS</button></li>
+          <li><button class="button-white button-outline" v-on:click="setPlatform('Windows')">Windows</button></li>
+        </ul>
+      </div>
+      <div class="content text-center">
+        <h3>Let's build your config</h3>
+        <h5>Update your settings on the left. Your .conf will update on the right.</h5>
+        <div class="row">
+          <div class="column">
+            <form class="center">
+              <fieldset>
+                <h4>Options</h4>
+                <div class="row">
+                  <div class="column">
+                    <h5>General</h5>
+                    <p>Customize general Hush settings
+                    <ul class="toggles">
+                      <li>
+                        <label>Enable Daemon</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionDaemon">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li>
+                        <label>Enable Server</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionServer">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li>
+                        <label>Enable Metrics</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionShowMetrics">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li>
+                        <label>Enable Mining</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionGen" v-on:click="showThreads">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li id="threads" style="clear: left;">
+                        <label>CPU Threads</label>
+                        <span class="thread-count" v-on:click="decreaseThreads"><</span>
+                        <input class="input" type="text" v-model="optionGenProcLimit" style="max-width: 40px; text-align: center;">
+                        <span class="thread-count" v-on:click="increaseThreads">></span>
+                      </li>
+                    </ul>
+                    <h5>Paths</h5>
+                    <p>Customize Hush data paths</p>
+                    <label>Change Path?</label>
+                    <label class="switch">
+                      <input type="checkbox" v-model="customPath" v-on:click="showPathInput">
+                      <div class="slider round"></div>
+                    </label>
+                    <li id="paths" style="clear: left; list-style-type: none;">
+                      <label>Blockchain Path</label>
+                      <input class="input" type="text" v-model="optionDataDir" style="border-color: #2d2d2d;">
+                    </li>
+                    <h5 style="margin-top: 15px;">Whitelist</h5>
+                    <p>Add trusted bootstrap nodes</p>
+                    <input style="border-color: #2d2d2d;" type="text" placeholder="Enter a ip address and hit enter" v-model="tempWhitelist" @keyup.enter="addWhiteList(tempWhitelist)">
+                    <ul class="whitelist" v-for="item in optionWhiteList" v-bind:item="item">
+                      <li>{{ item }}</li>
+                    </ul>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+            <button class="compile button-dark" v-on:click="compile">Compile hush.conf</button>
+          </div>
+          <div class="column">
+            <div class="platform-banner animated fadeInDown">
+              You have selected <span class="bold">{{ platform }}</span> as your platform. Please place <span class="bold">hush.conf</span> in the below path:
+              <div class="path">{{ path }}</div>
+            </div>
+
+            <div id="profile" class="profile animated fadeInDown" v-html="conf">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src='https://unpkg.com/vue'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <script src='main.js'></script>
+  </body>
+</html>
