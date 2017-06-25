@@ -51,6 +51,11 @@ new Vue({
           this.optionWhiteList.push(value)
           this.tempWhitelist = ''
         },
+        removeWhiteListItem: function (item) {
+          console.log(item)
+          var index = this.optionWhiteList.indexOf(item)
+          this.optionWhiteList.splice(index, 1)
+        },
         compile: function () {
           var currentdate = new Date();
           var compileTime = currentdate.getDate() + "/"

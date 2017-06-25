@@ -83,10 +83,10 @@
                       <input class="input" type="url" v-model="optionDataDir" style="border-color: #2d2d2d;">
                     </li>
                     <h5 style="margin-top: 15px;">Whitelist</h5>
-                    <p>Add trusted bootstrap nodes</p>
+                    <p>Add trusted bootstrap nodes. Remove by clicking.</p>
                     <input style="border-color: #2d2d2d;" type="text" placeholder="Enter a ip address and hit enter" v-model="tempWhitelist" @keyup.enter="addWhiteList(tempWhitelist)">
                     <ul class="whitelist" v-for="item in optionWhiteList" v-bind:item="item">
-                      <li>{{ item }}</li>
+                      <li v-on:click="removeWhiteListItem(item)">{{ item }}</li>
                     </ul>
                   </div>
                 </div>
