@@ -60,7 +60,7 @@
                           <div class="slider round"></div>
                         </label>
                       </li>
-                      <li id="threads" style="clear: left;">
+                      <li class="animated fadeInLeft" id="threads" style="clear: left;">
                         <label>CPU Threads</label>
                         <span class="thread-count" v-on:click="decreaseThreads"><</span>
                         <input class="input" type="text" v-model="optionGenProcLimit" style="max-width: 40px; text-align: center;">
@@ -74,7 +74,7 @@
                       <input type="checkbox" v-model="customPath" v-on:click="showPathInput">
                       <div class="slider round"></div>
                     </label>
-                    <li id="paths" style="clear: left; list-style-type: none;">
+                    <li class="animated fadeInLeft" id="paths" style="clear: left; list-style-type: none;">
                       <label>Blockchain Path</label>
                       <input class="input" type="text" v-model="optionDataDir" style="border-color: #2d2d2d;">
                     </li>
