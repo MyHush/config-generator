@@ -35,6 +35,12 @@ body {
   background-color: #2d2d2d;
   color: #ffffff;
 }
+
+.jumbo .logo {
+  width: 750px;
+  height: 600px
+}
+
 .jumbo #platform {
   margin: 40px 0px 0px 0px;
   text-align: center;
