@@ -218,3 +218,10 @@ input {
   width: 50%;
   margin: 20px auto;
 }
+
+.donate {
+  position: relative;
+  margin: 50 auto;
+  margin-bottom: 0px;
+  font-weight: lighter;
+}
