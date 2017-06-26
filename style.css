@@ -242,3 +242,38 @@ input {
   position: relative;
   top: 5px;
 }
+
+.tooltip {
+  position: relative;
+  display: inline;
+}
+.tooltip span {
+  position: absolute;
+  width:140px;
+  color: #2D2D2D;
+  background: #FFF;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  visibility: hidden;
+  border-radius: 6px;
+}
+.tooltip span:after {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  width: 0; height: 0;
+  border-bottom: 8px solid #FFF;
+  border-right: 8px solid transparent;
+  border-left: 8px solid transparent;
+}
+#tooltip1:hover.tooltip span {
+  visibility: visible;
+  opacity: 0.8;
+  top: 50px;
+  left: 50%;
+  margin-left: -76px;
+  z-index: 999;
+}
