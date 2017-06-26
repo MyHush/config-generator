@@ -119,6 +119,11 @@ body {
   color: #fff;
   border-radius: 5px;
 }
+
+.content .platform-banner code {
+  color: #2d2d2d;
+}
+
 .content .platform-banner .path {
   margin: 5px 0px 0px 0px;
   font-size: 13px;
