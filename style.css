@@ -26,8 +26,22 @@ body {
   color: white;
 }
 
+.button-white.button-outline:hover {
+  background-color: transparent;
+  color: white;
+}
+
 .button-white.button-clear {
   border-color: transparent;
+}
+
+code.dark {
+  background-color: #2d2d2d;
+  color: #fff;
+}
+
+code.light {
+  color: #2d2d2d;
 }
 
 .jumbo {
@@ -70,6 +84,7 @@ body {
   clear: both;
   margin-bottom: 0px;
 }
+
 .content form p {
   margin: 0px 0px 15px 0px;
 }
@@ -118,10 +133,6 @@ body {
   background: #333;
   color: #fff;
   border-radius: 5px;
-}
-
-.content .platform-banner code {
-  color: #2d2d2d;
 }
 
 .content .platform-banner .path {
