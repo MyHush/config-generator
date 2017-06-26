@@ -41,6 +41,10 @@ new Vue({
         showMinerInfo: function () {
           $('#threads').toggle()
           $('#minerAddress').toggle()
+
+          if (this.customMinerToAddress == 1) {
+            $('#minerInput').toggle()
+          }
         },
         showMinerAddress: function () {
           $('#minerInput').toggle()
