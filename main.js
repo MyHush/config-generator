@@ -7,7 +7,7 @@ new Vue({
         optionDaemon: 1,
         optionServer: 1,
         optionGen: 0,
-        optionGenProcLimit: 1,
+        optionGenProcLimit: 2,
         optionEquihashSolver: 'tromp',
         optionWhiteList: [],
         tempWhitelist: '',
