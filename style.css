@@ -80,6 +80,7 @@ body {
 }
 .content .toggles #threads {
   display: none;
+  float: left;
   list-style-type: none;
 }
 .content .toggles .thread-count {

@@ -19,7 +19,7 @@
         <h4>Select your platform</h4>
         <ul id="platform">
           <li><button class="button-white button-outline" v-on:click="setPlatform('Linux')">Linux</button></li>
-          <li><button class="button-white button-outline" v-on:click="setPlatform('Mac OS')">Mac OS</button></li>
+          <li><button class="button-white button-outline" v-on:click="setPlatform('Mac OS')" disabled>Mac OS</button></li>
           <li><button class="button-white button-outline" v-on:click="setPlatform('Windows')">Windows</button></li>
         </ul>
       </div>
@@ -64,7 +64,7 @@
                           <div class="slider round"></div>
                         </label>
                       </li>
-                      <li id="minerAddress" v-on:click="showMinerAddress">
+                      <li class="animated fadeInRight" id="minerAddress" v-on:click="showMinerAddress">
                         <label>Specific Address</label>
                         <label class="switch">
                           <input type="checkbox" v-model="customMinerToAddress" v-on:click="showMinerAddress">

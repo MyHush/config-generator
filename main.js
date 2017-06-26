@@ -26,7 +26,7 @@ new Vue({
           if (this.platform == 'Linux') {
             this.path = '/home/user/.hush'
           } else if (this.platform == "Mac OS") {
-            this.path = ''
+            this.path = '~/Library/Application Support/Hush/hush.conf'
           } else {
             this.path = 'C:\\Users\\your_username\\AppData\\Roaming\\Hush'
           }
