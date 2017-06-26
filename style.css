@@ -210,6 +210,11 @@ input:checked + .slider:before {
   display: none;
 }
 
+#miner, #minerAddress, #minerInput {
+  display: none;
+  list-style-type: none;
+}
+
 input {
   color: #606060;
 }

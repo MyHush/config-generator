@@ -60,7 +60,14 @@
                       <li>
                         <label>Enable Mining</label>
                         <label class="switch">
-                          <input type="checkbox" v-model="optionGen" v-on:click="showThreads">
+                          <input type="checkbox" v-model="optionGen" v-on:click="showMinerInfo">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li id="minerAddress" v-on:click="showMinerAddress">
+                        <label>Specific Address</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="customMinerToAddress" v-on:click="showMinerAddress">
                           <div class="slider round"></div>
                         </label>
                       </li>
@@ -70,6 +77,10 @@
                         <input class="input" type="text" v-model="optionGenProcLimit" style="max-width: 40px; text-align: center;">
                         <span class="thread-count" v-on:click="increaseThreads">></span>
                       </li>
+                      <li class="animated fadeInRight" id="minerInput" style="border-color: #2d2d2d;">
+                        <label>Transparent Address</label>
+                        <input class="input" type="text" v-model="optionMinerAddress" style="border-color: #2d2d2d;">
+                      </li>
                     </ul>
                     <h5>Paths</h5>
                     <p>Customize Hush data paths</p>
@@ -78,7 +89,7 @@
                       <input type="checkbox" v-model="customPath" v-on:click="showPathInput">
                       <div class="slider round"></div>
                     </label>
-                    <li class="animated fadeInLeft" id="paths" style="clear: left; list-style-type: none;">
+                    <li class="animated fadeInLeft" id="paths" style="list-style-type: none; border-color: #2d2d2d;">
                       <label>Blockchain Path</label>
                       <input class="input" type="url" v-model="optionDataDir" style="border-color: #2d2d2d;">
                     </li>
