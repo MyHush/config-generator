@@ -6,6 +6,7 @@ new Vue({
         conf: '',
         optionDaemon: 1,
         optionServer: 1,
+        optionTor: 0,
         optionGen: 0,
         optionGenProcLimit: 2,
         optionEquihashSolver: 'tromp',
@@ -87,6 +88,9 @@ new Vue({
           }
           if (this.optionShowMetrics == 1) {
             this.conf = this.conf + "<br /><br />showmetrics=1"
+          }
+          if (this.optionTor == 1) {
+            this.conf = this.conf + "<br /><br />addnode=hushnodexptkgea3.onion"
           }
           $('#profile').show()
         }
