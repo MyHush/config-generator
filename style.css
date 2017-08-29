@@ -52,6 +52,7 @@ code.light {
 
 .jumbo .logo {
   max-width: 1024px;
+  max-height: 60%;
   margin: 0 auto;
 }
 
