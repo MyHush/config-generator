@@ -56,8 +56,13 @@ code.light {
 }
 
 .jumbo .logo img {
+<<<<<<< HEAD
   height: 30%;
   max-width: 80%;
+=======
+  width: 80%;
+  max-height: 60%;
+>>>>>>> 10576def6b9c49dcbfb3ac138af34ca60498f7fc
 }
 
 .jumbo #platform {
