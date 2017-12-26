@@ -4,6 +4,11 @@ new Vue({
         platform: '',
         path: '',
         conf: '',
+        peersList: [
+          'explorer.myhush.org',
+          'hushipv4.matthewreichardt.com',
+          'stilgar.leto.net'
+        ],
         optionDaemon: 1,
         optionServer: 1,
         optionTor: 0,
@@ -92,8 +97,14 @@ new Vue({
           if (this.optionShowMetrics == 1) {
             this.conf = this.conf + "<br /><br />showmetrics=1"
           }
+          for (var i = 0; i< this.peersList.length; i++) {
+            if (i == 0) {
+              this.conf = this.conf + "<br />"
+            }
+            this.conf = this.conf + "<br />addnode=" + this.peersList[i]
+          }
           if (this.optionTor == 1) {
-            this.conf = this.conf + "<br /><br />addnode=hushnodexptkgea3.onion"
+            this.conf = this.conf + "<br />addnode=hushnodexptkgea3.onion"
           }
           $('#profile').show()
         }
