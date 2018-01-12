@@ -7,6 +7,7 @@ new Vue({
         peersList: [
           'explorer.myhush.org',
           'hushipv4.matthewreichardt.com',
+          'mmc01.madbuda.me',
           'stilgar.leto.net'
         ],
         optionDaemon: 1,
