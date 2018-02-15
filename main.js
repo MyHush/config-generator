@@ -6,9 +6,11 @@ new Vue({
         conf: '',
         peersList: [
           'explorer.myhush.org',
-          'hushipv4.matthewreichardt.com',
-          'mmc01.madbuda.me',
-          'stilgar.leto.net'
+          'stilgar.leto.net',
+          'dnsseed.myhush.org',
+          'dnsseed2.myhush.org',
+          'dnsseed.bleuzero.com',
+          'dnsseed.hush.quebec'            
         ],
         optionDaemon: 1,
         optionServer: 1,
