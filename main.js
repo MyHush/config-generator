@@ -40,6 +40,9 @@ new Vue({
             this.path = 'C:\\Users\\your_username\\AppData\\Roaming\\Hush'
           }
           $('.platform-banner').show()
+          $(document.body).animate({
+             'scrollTop':   $('#build').offset().top
+          }, 1200);
         },
         showPathInput: function () {
           $('#paths').toggle()
