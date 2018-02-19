@@ -19,11 +19,11 @@
         <h4>Select your platform</h4>
         <ul id="platform">
           <li><button class="button-white button-outline" v-on:click="setPlatform('Linux')">Linux</button></li>
-          <li class="tooltip" id="tooltip1"><button class="button-white button-outline">Mac OS</button><span>Coming soon</span></li>
+          <li><button class="button-white button-outline" v-on:click="setPlatform('Mac OS')">Mac OS</button></li>
           <li><button class="button-white button-outline" v-on:click="setPlatform('Windows')">Windows</button></li>
         </ul>
       </div>
-      <div class="content text-center">
+      <div id="build" class="content text-center">
         <h3>Let's build your config</h3>
         <h5>Update your settings on the left. Your <code class="dark">.conf</code> will update on the right.</h5>
         <div class="row">
