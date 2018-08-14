@@ -7,8 +7,6 @@ new Vue({
         peersList: [
           'explorer.myhush.org',
           'stilgar.leto.net',
-          'dnsseed.myhush.org',
-          'dnsseed2.myhush.org',
           'dnsseed.bleuzero.com',
           'dnsseed.hush.quebec'            
         ],
