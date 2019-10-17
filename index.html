@@ -34,7 +34,7 @@
                 <div class="row">
                   <div class="column">
                     <h5>General</h5>
-                    <p>Customize general Hush settings
+                    <p>Customize general Hush settings</p>
                     <ul class="toggles">
                       <li>
                         <label>Enable Daemon</label>
@@ -89,6 +89,31 @@
                         <input class="input" type="text" v-model="optionMinerAddress" style="border-color: #2d2d2d;">
                       </li>
                     </ul>
+                    <h5>Recommended</h5>
+                    <p>We suggest enabling these by default.</p>
+                    <ul class="toggles">
+                      <li>
+                        <label>Address Index</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionAddrIndex">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li>
+                        <label>Spent Index</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionSpentIndex">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                      <li>
+                        <label>Timestamp Index</label>
+                        <label class="switch">
+                          <input type="checkbox" v-model="optionTimestampIndex">
+                          <div class="slider round"></div>
+                        </label>
+                      </li>
+                    </ul>
                     <h5>Paths</h5>
                     <p>Customize Hush data paths</p>
                     <label>Change Path?</label>
@@ -125,7 +150,7 @@
         <div class="row donate">
           <div class="column">
             Developed by <a href="https://forum.myhush.org/u/mreichardt/activity">@mreichardt</a><br />
-            <span><i>t1NdPHBDTE4fgcFmW85bq7qpg486Hakm4W5</i></span>
+            <span><b>HUSH3:</b> <i>RRJpqr5GDhR8xuKh7bvWyPHTqMuh3CZ6tt</i></span>
           </div>
         </div>
       </div>
