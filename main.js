@@ -8,7 +8,7 @@ new Vue({
           'explorer.myhush.org',
           'stilgar.leto.net',
           'dnsseed.bleuzero.com',
-          'dnsseed.hush.quebec'            
+          'dnsseed.hush.quebec'
         ],
         optionDaemon: 1,
         optionServer: 1,
@@ -25,17 +25,20 @@ new Vue({
         optionRpcUser: 'rpcuser',
         optionRpcPassword: Math.random().toString(36).slice(2),
         optionShowMetrics: 0,
-        optionDataDir: ''
+        optionDataDir: '',
+        optionAddrIndex: 1,
+        optionSpentIndex: 1,
+        optionTimestampIndex: 1
     },
     methods: {
         setPlatform: function (option) {
           this.platform = option
           if (this.platform == 'Linux') {
-            this.path = '/home/user/.hush'
+            this.path = '/home/user/.komodo/HUSH3.conf'
           } else if (this.platform == "Mac OS") {
-            this.path = '~/Library/Application Support/Hush/hush.conf'
+            this.path = '~/Library/Application Support/Komodo/HUSH3.conf'
           } else {
-            this.path = 'C:\\Users\\your_username\\AppData\\Roaming\\Hush'
+            this.path = 'C:\\Users\\your_username\\AppData\\Roaming\\Komodo\\HUSH3.conf'
           }
           $('.platform-banner').show()
           $(document.body).animate({
@@ -98,7 +101,16 @@ new Vue({
           if (this.customMinerToAddress == 1) {
             this.conf = this.conf + "<br />mineraddress=" + this.optionMinerAddress
           }
-          if (this.optionShowMetrics == 1) {
+          if (this.optionAddrIndex == 1) {
+            this.conf = this.conf + "<br /><br />addressindex=1"
+          }
+          if (this.optionSpentIndex == 1) {
+            this.conf = this.conf + "<br />spentindex=1"
+          }
+          if (this.optionTimestampIndex == 1) {
+            this.conf = this.conf + "<br />timestampindex=1"
+          }
+          if (this.optionAddrIndex == 1) {
             this.conf = this.conf + "<br /><br />showmetrics=1"
           }
           for (var i = 0; i< this.peersList.length; i++) {
