@@ -2,7 +2,4 @@
 
 An easy to use Hush config generator
 
-# In Progress
-
-Currently being updated for our v3 mainnet!
-
+Usable with our v3 mainnet!
